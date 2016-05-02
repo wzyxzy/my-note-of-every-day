@@ -1,0 +1,9 @@
+今天研究了解析html的jsoup,主要研究的代码如下  
+Document document = Jsoup.parse(response);
+        Log.e("initj",document.toString());
+        Elements links = document.select("a[href]");
+        Log.e("ahref",links.toString());
+        for (Element link : links) {
+            Log.e("links", link.attr("href")+link.text());
+        }
+明天继续研究

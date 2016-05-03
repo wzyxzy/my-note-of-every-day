@@ -38,4 +38,6 @@ my note for studying
                 myNotication = builder.getNotification();
                 manager.notify(11, myNotication);
  13.manifest有权限是过时的 也有权限是重复的 将其删掉.  
+ 14.主程序中的icon2和LUA的icon冲突 在主程序的manifest下的<application>中添加一句代码'tools:replace="android:icon"'  
+ 
   完成这些步骤以后studio顺利运行此项目,后续还会继续对此进行更新 

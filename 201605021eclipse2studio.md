@@ -37,5 +37,5 @@ my note for studying
 
                 myNotication = builder.getNotification();
                 manager.notify(11, myNotication);
-    
+ 13.manifest有权限是过时的 也有权限是重复的 将其删掉.  
   完成这些步骤以后studio顺利运行此项目,后续还会继续对此进行更新 

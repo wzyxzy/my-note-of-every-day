@@ -6,8 +6,13 @@ my note for studying
    
    
  1.首先,需要将ndk配置好,因为之前没有使用过这个工具,所以必须下载并且配置  
+   修改所有库的安卓版本和工程的安卓版本  
  2.修改project.properties文件,添加ndk的配置  
- 3.修改所有库的安卓版本和工程的安卓版本  
+ android.useDeprecatedNdk=true  
+ 3.在luajava.c下自定义lua.h的目录  
+ #include "../lua/lua.h"  
+ #include "../lua/lualib.h"  
+ #include "../lua/lauxlib.h"  
  4.导入第三方包(如v7的新版包等)  
  5.删除重复的dimen.xml文件  
  6.添加apache的网络访问库,在android{}中加入useLibrary 'org.apache.http.legacy'  
@@ -32,5 +37,5 @@ my note for studying
 
                 myNotication = builder.getNotification();
                 manager.notify(11, myNotication);
-  13.自定义luajava.h的目录  
+    
   完成这些步骤以后studio顺利运行此项目,后续还会继续对此进行更新 

@@ -30,5 +30,5 @@
   chmod a+x debian_netspeeder_tennfy.sh  
   bash debian_netspeeder_tennfy.sh  
   ./net_speeder venet0 "ip"  
-  echo 'nohup ./net_speeder venet0 "ip" >/dev/null 2>&1 &' >> /etc/rc.local  
+  echo 'nohup /root/net_speeder venet0 "ip" >/dev/null 2>&1 &' >> /etc/rc.local  
   

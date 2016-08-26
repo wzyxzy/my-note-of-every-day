@@ -1,0 +1,23 @@
+本次试用了91yun的一键安装包。由于此项目作者不再更新，故直接使用91yun即可。  
+安装：  
+  
+wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/finalspeed/master/install_fs.sh && bash install_fs.sh  
+   
+卸载：  
+  
+wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/finalspeed/master/install_fs.sh && bash install_fs.sh uninstall  
+  
+启动：  
+/etc/init.d/finalspeed start  
+  
+停止命令：  
+/etc/init.d/finalspeed stop  
+  
+状态命令（查看日志）：  
+/etc/init.d/finalspeed status  
+  
+安装路径：  
+/fs/  
+   
+日志路径：  
+/fs/server.log  

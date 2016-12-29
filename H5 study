@@ -1,0 +1,10 @@
+根据表格动态添加  
+if(data!=null&&data!="0"){
+									yisao++;
+									document.getElementById("yisao").innerHTML=yisao+"";
+									$("#rows").append("<tr><td colspan='2' valign='bottom' style='padding-top: 1em;border: 0px;color:#666666'>【箱码】"+result+"</td><td rowspan='2' style='color:blue;'>已扫</td></tr><tr><td colspan='2' style='padding-bottom: 1em;color:#666666'>"+data+"</td></tr>"); 
+								}else{
+									shixiao++;
+									document.getElementById("shixiao").innerHTML=shixiao+"";
+									$("#rows").append("<tr><td colspan='2' style='padding-bottom: 1em;padding-top: 1em;color:#666666'>【箱码】"+result+"</td><td style='color:red;'>无效</td></tr>"); 
+								}

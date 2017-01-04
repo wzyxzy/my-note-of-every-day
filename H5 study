@@ -22,3 +22,22 @@ getJson的使用
 	}  
 	
 如果不是用result.tv_list，field就是一个数组。  
+   
+   ajax或者getJson遇到for循环需要闭包，原因是异步操作会慢于for循环   
+   
+   
+   var title, i;  
+   for (i = 0; i < some_array.length; i += 1) {  
+   title = some_array[i];  
+   $.getJSON(  
+	'some.url/' + title,  
+	(function(thisi) {  
+	return function(data) {  
+	do_something_with_data(data, thisi);  
+	// create a new closure on the parameter thisi  
+	// which will hold the correct value at invocation time  
+	};  
+   }(i)) // calling the function with the current value  
+ );  
+}  
+

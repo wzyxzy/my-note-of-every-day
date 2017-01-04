@@ -37,7 +37,6 @@ getJson的使用
 	// create a new closure on the parameter thisi  
 	// which will hold the correct value at invocation time  
 	};  
-   }(i)) // calling the function with the current value  
- );  
+   }(i)); // calling the function with the current value  
 }  
 

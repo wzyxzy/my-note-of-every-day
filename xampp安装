@@ -1,0 +1,15 @@
+如果已经安装过lamp，可以先卸载它  
+sudo tasksel remove lamp-server  
+然后删除或者不删除相关目录  
+刷新   sudo apt-get update  
+先从官网下载xampp 现在是.run文件，直接给权限就行  
+chmod +x ./xampp.run  
+安装  ./xampp.run  
+启动  /opt/lampp/lampp start  
+加密  /opt/lampp/lampp security  
+可以配置phpmyadmin 外网访问权限  
+也可以配置禁止访问目录文件夹：  
+将：  
+Options Indexes FollowSymLinks ExecCGI Includes  
+修改为：  
+Options FollowSymLinks ExecCGI Includes  

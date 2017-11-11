@@ -1,1 +1,11 @@
-
+安装phpmyadmin:  
+sudo apt-get install phpmyadmin  
+sudo apt-get install php-mbstring  
+sudo apt-get install php-gettext  
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin  
+  
+禁止显示索引  
+etc/apache2/apache.conf中WWW将 Options Indexes FollowSymLinks 改成 Options FollowSymLinks 即可以禁止 Apache 显示该目录结构,改完记得service apache2 restart
+。  
+  
+数据库权限，数据库备份，mysql与java连接等等。  

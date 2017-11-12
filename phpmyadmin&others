@@ -9,3 +9,6 @@ etc/apache2/apache.conf中WWW将 Options Indexes FollowSymLinks 改成 Options F
 。  
   
 数据库权限，数据库备份，mysql与java连接等等。  
+数据库备份出现错误可以用xml格式替换sql格式  
+tomcat启动慢  
+apt-get install haveged  

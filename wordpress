@@ -1,0 +1,40 @@
+Step 1: Create a MySQL Database and User for WordPress  
+mysql -u root -p  
+CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;  
+GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'password';  
+FLUSH PRIVILEGES;  
+EXIT;  
+  
+  
+Step 2: Install Additional PHP Extensions  
+sudo apt-get update  
+sudo apt-get install php-curl php-gd php-mbstring php-mcrypt php-xml php-xmlrpc  
+systemctl restart apache2  
+  
+  
+Step 3: Adjust Apache's Configuration to Allow for .htaccess Overrides and Rewrites  
+/etc/apache2/apache2.conf  
+. . .  
+  
+<Directory /var/www/html/>  
+    AllowOverride All  
+</Directory>  
+  
+. . .  
+sudo a2enmod rewrite  
+apache2ctl configtest  
+systemctl restart apache2  
+  
+  
+Step 4: Download WordPress  
+cd /tmp  
+curl -O https://wordpress.org/latest.tar.gz  
+tar xzvf latest.tar.gz  
+touch /tmp/wordpress/.htaccess  
+chmod 660 /tmp/wordpress/.htaccess  
+cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php  
+mkdir /tmp/wordpress/wp-content/upgrade  
+sudo cp -a /tmp/wordpress/. /var/www/html  
+  
+  
+Step 5: Configure the WordPress Directory  

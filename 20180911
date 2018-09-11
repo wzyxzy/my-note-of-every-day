@@ -1,0 +1,14 @@
+公司的联想装ubuntu不能用无线  
+进入/etc/modprobe.d/文件夹下创建.conf文件，把影响无线wifi开关的“东西”加入黑名单。
+
+这个“东西”每种型号品牌的都不一样，在部分联想电脑上是ideapad_laptop，在其他电脑上有可能是其他的名字。
+
+#sudo gedit /etc/modprobe.d/ideapad.conf
+
+打开文件后在第一行输入
+
+blacklist ideapad_laptop
+
+保存并关闭后再执行#sudo modprobe -r ideapad_laptop
+
+重启之后，右上角的wifi就可以使用了。

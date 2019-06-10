@@ -1,0 +1,4 @@
+apt-get install curl vim -y  
+bash <(curl -L -s https://install.direct/go.sh)  
+systemctl start v2ray/service v2ray start  
+systemctl status v2ray/service v2ray status   

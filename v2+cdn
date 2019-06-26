@@ -1,4 +1,26 @@
 apt-get install curl vim -y  
 bash <(curl -L -s https://install.direct/go.sh)  
-systemctl start v2ray/service v2ray start  
-systemctl status v2ray/service v2ray status   
+systemctl start v2ray 
+systemctl status v2ray   
+
+
+bbr加速
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+
+
+uuid
+/usr/bin/v2ray/v2ctl uuid
+
+
+重启
+systemctl restart v2ray
+
+
+tls证书
+apt-get -y install socat
+curl  https://get.acme.sh | sh
+sudo ~/.acme.sh/acme.sh --issue -d mydomain.me --standalone -k ec-256
+sudo ~/.acme.sh/acme.sh --renew -d mydomain.com --force --ecc
+sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
+
+详情：https://toutyrater.github.io/advanced/tls.html

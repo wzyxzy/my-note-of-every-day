@@ -24,3 +24,8 @@ sudo ~/.acme.sh/acme.sh --renew -d mydomain.com --force --ecc
 sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
 
 详情：https://toutyrater.github.io/advanced/tls.html
+
+ 
+   
+     
+     

@@ -18,7 +18,7 @@ wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
 
 
 uuid
-/usr/bin/v2ray/v2ctl uuid
+/usr/local/bin/v2ctl uuid
 
 
 重启

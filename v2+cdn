@@ -24,6 +24,9 @@ uuid
 重启
 systemctl restart v2ray
 
+开机自启动
+systemctl enable v2ray
+
 
 tls证书
 apt-get -y install socat

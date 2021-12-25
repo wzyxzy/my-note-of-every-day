@@ -35,9 +35,11 @@ systemctl enable v2ray
 tls证书
 apt-get -y install socat
 curl  https://get.acme.sh | sh
-sudo ~/.acme.sh/acme.sh --issue -d mydomain.me --standalone -k ec-256
-sudo ~/.acme.sh/acme.sh --renew -d mydomain.com --force --ecc
-sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
+sudo ~/.acme.sh/acme.sh --register-account -m my@mydomain.com
+sudo ~/.acme.sh/acme.sh --issue -d my.mydomain --standalone -k ec-256
+sudo ~/.acme.sh/acme.sh --renew -d my.mydomain --force --ecc
+sudo ~/.acme.sh/acme.sh --installcert -d my.mydomain --fullchainpath /usr/local/etc/v2ray/v2ray.crt --keypath /usr/local/etc/v2ray/v2ray.key --ecc
+chmod 644 /usr/local/etc/v2ray/v2ray.key
 
 详情：https://toutyrater.github.io/advanced/tls.html
 
